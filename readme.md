@@ -13,6 +13,7 @@
 ## 📸 Vistas del Proyecto (Demo visual)
 
 **1. Interfaz Principal y Consumo de API externa**
+![Consumo de API](assets/api-externa.gif)
 <video src="assets/api-consumo.mp4" autoplay loop muted width="100%"></video>
 
 **2. API REST interna (Django REST Framework)**
