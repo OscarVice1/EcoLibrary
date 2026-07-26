@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="container-fluid p-5 bg-dark-subtle">
+    <h1>Libros</h1>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+
+        {% for book in books %}
+        <div class="col">
+            <div class="card">
+                {% if book.image %}
+                <img src="{{ book.img.url }}" class="card-img-top" alt="{{ book.title }}">
+                {%else%}
+                <span class="text-muted fs-1">📖</span>
+                {% endif %}
+                <div class="card-body">
+                    <h5 class="card-title">{{ book.title }}</h5>
+                    <p class="card-text"><strong>Autor:</strong> {{ book.author }}</p>
+                    <p class="card-text"><strong>Categoria:</strong> {{ book.category }}</p>
+                    <p class="card-text"><strong>Descripcion:</strong> {{book.description }}</p>
+                    </p>
+                    {% if user.is_authenticated%}
+                    {% if book.id in favorites_id%}
+                    <a href="{%url 'toggle_favorite' book.id%}" class="btn btn-outline-info  w-100 mb-1">Quitar de
+                        Favoritos</a>
+                    {%else%}
+                    <a href="{%url 'toggle_favorite' book.id%}" class="btn btn-outline-warning  w-100 mb-1">Agregar
+                        a Favoritos</a>
+                    {%endif%}
+                    {%else%}
+                    <a href="{% url 'register' %}" class="btn btn-outline-info mb-1  ">Regístrate para agregar
+                        favorito</a>
+                    {% endif %}
+                    <div class="mt-auto">
+                        <a href="{% url 'details' book.id %}" class="btn btn-outline-info w-100">Ver Detalles</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% empty %}
+        <div class="col-12 bg">
+            <p>No hay más eventos programados por el momento.</p>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{%endblock%}

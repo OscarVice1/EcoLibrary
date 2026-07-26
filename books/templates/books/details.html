@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ book.title }} | Detalle{% endblock %}
+
+{% block content %}
+<div class="card mb-3 shadow-sm ">
+    <div class=" row g-0">
+        <div class="col-md-5">
+            {% if book.image %}
+            <img src="{{ book.image.url }}" class="img-fluid rounded-start" alt="{{ book.title }}">
+            {% elif external_data.cover_id %}
+            <img src="https://covers.openlibrary.org/b/id/{{ external_data.cover_id }}-L.jpg"
+                class="img-fluid rounded shadow-lg w-100" alt="Portada de Open Library">
+            {% else %}
+            <div class="bg-light text-secondary d-flex align-items-center justify-content-center h-100"
+                style="height: 300px;">
+                <div class="text-center">
+                    <span class="display-1">📖</span>
+                </div>
+            </div>
+            {% endif %}
+        </div>
+        <div class="col-md-7 ">
+            <div class="card-body">
+                <h1 class="card-title">{{book.title}}</h1>
+                <h3 class="text-secondary">de <span class="text-dark text-decoration-underline">{{book.author}}</span>
+                </h3>
+                <h3 class="card-text"><span class="badge text-bg-secondary">Categoria: {{book.category}}</span>
+                </h3>
+                <h3 class="card-text"><span class="badge text-bg-info">Subido a la plataforma:
+                        {{book.publication_date}}</span>
+                </h3>
+                <h4>Descripción</h4>
+                <p>
+                    {{ book.description }}
+                </p>
+                {% if external_data %}
+                <h5 class="card-title text-info fw-bold">Información de Open Library</h5>
+                <ul class="list-unstyled mb-0">
+                    <li><strong>Calificación Promedio:</strong> {{ external_data.ratings_average }}</li>
+                    <li><strong>Registrado el:</strong> {{ external_data.first_publish_year }}</li>
+                    <li><strong>Editorial principal:</strong> {{ external_data.publisher }}</li>
+                </ul>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

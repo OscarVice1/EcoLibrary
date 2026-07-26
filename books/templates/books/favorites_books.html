@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block title %} Libros Favoritos {% endblock %}
+{% block content %}
+<div class="container p-5">
+    <h2>Mis Libros</h2>
+    <hr>
+
+    {% if favorites_books%}
+    <div class="list-group">
+        {% for favorite_book in favorites_books%}
+        <div class="list-group-item list-group-item-action flex-column align-items-start mb-3">
+            {% if fav.book.image %}
+            <img src="{{ favorite_book.book.image.url }}" class="w-100 h-100" style="object-fit: cover;">
+            {% else %}
+            <span class="fs-1">📖</span>
+            {% endif %}
+            <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">Titulo: {{ favorite_book.book.title }}</h5>
+            </div>
+            <p class="mb-1">
+                Autor: {{favorite_book.book.author}}
+            </p>
+            <p class="mb-1">Descripción: {{ favorite_book.book.author }}</p>
+            <a href="{%url 'details' favorite_book.book.id%}">Ver detalles</a>
+            <form action="{% url 'toggle_favorite' favorite_book.book.id%}" method="post" class="mt-2">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-danger btn-sm">Borrar de favoritos</button>
+            </form>
+        </div>
+        {% endfor %}
+    </div>
+    {% else %}
+    <p>No tienes ningun libro favorito.</p>
+    <a href="{% url 'home' %}" class="btn btn-primary">Ver libros disponibles</a>
+    {% endif %}
+
+</div>
+{% endblock %}
