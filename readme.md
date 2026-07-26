@@ -13,15 +13,18 @@
 ## 📸 Vistas del Proyecto (Demo visual)
 
 **1. Interfaz Principal y Consumo de API externa**
-<video src="assets/api-consumo.mp4" autoplay loop muted width="100%"></video>
+https://github.com/user-attachments/assets/c52ac748-6c2d-46df-9f25-c262ea310161
 
 **2. API REST interna (Django REST Framework)**
-<video src="assets/api-rest.mp4" autoplay loop muted width="100%"></video>
+https://github.com/user-attachments/assets/6d808ee2-3326-4664-9275-d3ed22817ce0
 
 **3. Seguridad y Control de Datos**
 ![Base de datos segura](assets/admin.png)
 
 ---
+
+
+
 
 ## 🧠 Valor Técnico y Aprendizajes (Por qué este proyecto importa)
 
