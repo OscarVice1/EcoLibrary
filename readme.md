@@ -13,10 +13,10 @@
 ## 📸 Vistas del Proyecto (Demo visual)
 
 **1. Interfaz Principal y Consumo de API externa**
-https://github.com/user-attachments/assets/c52ac748-6c2d-46df-9f25-c262ea310161
+<img width="1846" height="848" alt="api-consumo" src="https://github.com/user-attachments/assets/12871495-429b-4389-b218-a7e5c72d768a" />
 
 **2. API REST interna (Django REST Framework)**
-https://github.com/user-attachments/assets/6d808ee2-3326-4664-9275-d3ed22817ce0
+<img width="1506" height="940" alt="api-rest" src="https://github.com/user-attachments/assets/cd25e219-1e60-4919-92dc-0df526b47eb0" />
 
 **3. Seguridad y Control de Datos**
 ![Base de datos segura](assets/admin.png)
