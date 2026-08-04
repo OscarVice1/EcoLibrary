@@ -43,7 +43,7 @@ Durante el desarrollo de este proyecto, apliqué conocimientos directamente enfo
 
 - **Lenguaje:** Python 3
 - **Frameworks:** Django, Django REST Framework (DRF)
-- **Base de Datos:** SQLite / PostgreSQL
+- **Base de Datos:** SQLite 
 - **Integraciones:** Open Library API
 - **Control de versiones:** Git
 
