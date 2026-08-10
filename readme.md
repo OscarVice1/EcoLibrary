@@ -1,8 +1,8 @@
-# 📚 EcoLibrary - Sistema de Gestión de Biblioteca y API REST
+# EcoLibrary - Sistema de Gestión de Biblioteca y API REST
 
 **EcoLibrary** es un sistema backend desarrollado en Python y Django que centraliza la información de libros y automatiza la obtención de metadatos. Está diseñado bajo una arquitectura modular orientada al desarrollo de APIs y a la correcta gestión de datos relacionales.
 
-## 🚀 ¿Qué se construyó? (Características Principales)
+## ¿Qué se construyó? (Características Principales)
 
 - **Integración de API Externa:** Consume de forma asíncrona la API pública de _Open Library_ para autocompletar información vital (portadas, calificaciones y años de publicación) basándose únicamente en el título del libro.
 - **API RESTful Propia:** Expone los datos de la biblioteca mediante **Django REST Framework (DRF)**, permitiendo que cualquier frontend o aplicación móvil consuma la información estructurada en formato JSON.
@@ -10,7 +10,7 @@
 
 ---
 
-## 📸 Vistas del Proyecto (Demo visual)
+## Vistas del Proyecto (Demo visual)
 
 **1. Interfaz Principal y Consumo de API externa**
 <img width="1846" height="848" alt="api-consumo" src="https://github.com/user-attachments/assets/12871495-429b-4389-b218-a7e5c72d768a" />
@@ -26,7 +26,7 @@
 
 
 
-## 🧠 Valor Técnico y Aprendizajes (Por qué este proyecto importa)
+## Valor Técnico y Aprendizajes (Por qué este proyecto importa)
 
 Durante el desarrollo de este proyecto, apliqué conocimientos directamente enfocados a requerimientos reales de la industria Backend:
 
@@ -39,7 +39,7 @@ Durante el desarrollo de este proyecto, apliqué conocimientos directamente enfo
 
 ---
 
-## 🛠️ Stack Tecnológico
+## Stack Tecnológico
 
 - **Lenguaje:** Python 3
 - **Frameworks:** Django, Django REST Framework (DRF)
