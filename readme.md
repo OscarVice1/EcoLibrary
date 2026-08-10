@@ -24,8 +24,6 @@
 ---
 
 
-
-
 ## Valor Técnico y Aprendizajes (Por qué este proyecto importa)
 
 Durante el desarrollo de este proyecto, apliqué conocimientos directamente enfocados a requerimientos reales de la industria Backend:
@@ -36,15 +34,5 @@ Durante el desarrollo de este proyecto, apliqué conocimientos directamente enfo
     - Diseño y mantenimiento de endpoints RESTful con serializadores para la comunicación entre módulos.
 - **Seguridad y Control de Acceso:** Implementación de permisos estrictos en la API. Las rutas de lectura son públicas (`AllowAny`), pero las acciones de escritura, actualización o borrado requieren privilegios de administrador (`IsAdminUser`).
 - **Buenas prácticas y Código Limpio:** Uso intensivo de _Type Hinting_ en Python para asegurar la predictibilidad del código, modularidad, y documentación de funciones mediante _Docstrings_.
-
----
-
-## Stack Tecnológico
-
-- **Lenguaje:** Python 3
-- **Frameworks:** Django, Django REST Framework (DRF)
-- **Base de Datos:** SQLite 
-- **Integraciones:** Open Library API
-- **Control de versiones:** Git
 
 ---
